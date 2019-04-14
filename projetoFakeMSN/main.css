@@ -1,0 +1,73 @@
+*{margin: 0;padding:0;}
+body
+{
+    background: linear-gradient(to bottom, rgba(227, 239,246,.8), #fff );
+    background-repeat: no-repeat;
+}
+#containerPrincipal
+{
+    margin: 0 34%;
+    padding: 2% 5%;
+}
+
+#ajuda
+{
+    margin: 0 auto;
+    font-size: 8pt;
+}
+#ajuda p
+{
+    position: relative;
+    top: -10px;
+    text-align: right;
+}
+
+#framePerfil
+{
+    display: block;
+    margin: 0 auto;
+    height: 150px;
+    margin-bottom: 15%; 
+}
+
+#formulario p
+{
+    margin-bottom: 0;
+    font-size: 8pt;
+}
+
+#formulario #senha, #email
+{
+    width: 100%;
+    margin-bottom: 5%;
+    border-top: none;
+    border-left: none;
+}  
+
+#formulario #entrarComo
+{
+    margin-bottom: 20%;
+}
+
+.lembretes p
+{
+    display: inline-block;
+}
+
+#formulario button
+{
+    background: linear-gradient(to right, #94C8F2, #fff);
+    color: black;
+    display: block;
+    border-radius: 5px;
+    padding: 2px 15px;
+    margin: 20% auto;
+}
+
+#rodape p
+{
+    font-size: 8pt;
+    text-align: left;
+    margin-top: 40%;
+    margin-bottom: 0%;
+}
