@@ -64,10 +64,20 @@ body
     margin: 20% auto;
 }
 
-#rodape p
+#rodape
 {
-    font-size: 8pt;
-    text-align: left;
     margin-top: 40%;
     margin-bottom: 0%;
+}
+    #rodape .logoMSN
+{
+    width:10%;
+    display: inline-block;
+}
+#rodape p
+{
+    display: inline-block;
+    font-size: 8pt;
+    text-align: left;
+    width: 70%;
 }
