@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="main.css">
-    <title>FakeWindows Live</title>
-</head>
-<body>
-    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="main.css">
+        <title>FakeWindows Live</title>
+    </head>
+    <body>
     <div class="col-sm-4 col-md-3 col-lg-3" id="containerPrincipal">
         <!-- ajuda -->
         <div id="ajuda" class="">
@@ -23,7 +22,7 @@
         </div>
 
         <!-- formulario e configs do no credenciamento -->
-        <div id="formulario">
+        <form id="formulario">
             <p>Endereço de email:</p>
             <input id="email" name="email" type="email"/>
             <p>Senha:</p>
@@ -45,7 +44,7 @@
 
             <button id="" name="">Entrar</button>
 
-        </div>
+        </form>
         
         <!-- rodape -->
         <div id="rodape">
