@@ -108,6 +108,5 @@ var app = new Vue({
             var container = this.$el.querySelector('#messages');
             container.scrollTop = container.scrollHeight;
         },
-
     }
 });
