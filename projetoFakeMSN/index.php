@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- style do bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- style do projeto -->
         <link rel="stylesheet" href="main.css">
         <title>FakeWindows Live</title>
     </head>
@@ -22,7 +24,7 @@
         </div>
 
         <!-- formulario e configs do no credenciamento -->
-        <form id="formulario">
+        <form id="formulario" name="formulario" method="post" action="class/controllerIndex.php">
             <p>Endereço de email:</p>
             <input id="email" name="email" type="email"/>
             <p>Senha:</p>
@@ -30,6 +32,8 @@
             
             <div id="entrarComo">
                 <p id="">Entrar como <span>Online</span><span id="dropSimbolo" class="glyphicon glyphicon-triangle-bottom" id="ajudaOpcao"></span></p>
+                <!-- Status static mas tem que alterar para dinamico -->
+                <input type="hidden" id="status" name="status" value="Online" />
             </div>
                 
             <div class="lembretes">
@@ -42,7 +46,7 @@
                 <p>Lembrar minha senha:</p>
             </div>
 
-            <button id="" name="">Entrar</button>
+            <button id="" onclick="validaDados()" name="">Entrar</button>
 
         </form>
         
@@ -53,7 +57,8 @@
         </div>
     </div>
 
-    <!-- JavaScript -->
+    <!-- JavaScript do projeto -->
+    <script src="main.js"></script>
     <!-- jQuery primeiro e Bootstrap JS -->
     <script src="js/jquery-3.4.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
