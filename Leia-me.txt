@@ -5,3 +5,5 @@ diretório destinado a armazenar todo material visual como logos, screens, simbol
 
 projetoFakeMSN:
 diretório destinado à armazenar o código fonte do projeto do FajeMSN
+
+alterei
