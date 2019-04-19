@@ -62,11 +62,26 @@ body
     margin-bottom: 5%;
     border-top: none;
     border-left: none;
+    border-color: rgba(148,200,242,.3);
 }  
 
-#formulario #entrarComo
+#formulario #entrarComo #statusOptions
 {
-    margin-bottom: 20%;
+    display: none;
+    text-align: right;
+    position: absolute;
+    right: 14vw;
+    background: #fff;
+    width: 10vw;
+}
+
+#das
+{
+    margin-top: 8vh;
+}
+#formulario #entrarComo #statusOptions .statusOptionsItens
+{
+    margin: 0.5vh 0;
 }
 
 .lembretes p
@@ -81,7 +96,7 @@ body
     display: block;
     border-radius: 5px;
     padding: 2px 15px;
-    margin: 20% auto;
+    margin: 10% auto 20% auto;
 }
 
 #rodape
