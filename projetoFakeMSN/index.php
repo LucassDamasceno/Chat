@@ -12,8 +12,13 @@
         <!-- ajuda -->
         <div id="ajuda" class="">
             <p for="ajudaIcon" class="">Ajuda
-            <span class="glyphicon glyphicon-triangle-bottom" id="ajudaOpcao"></span>
+            <span class="glyphicon glyphicon-triangle-bottom" id="ajudaIcon"></span>
             </p>
+        </div>
+        <div id="ajudaOptions">
+            <div class="ajudaOptionsItens"><a href="#">Opção1</a></div>
+            <div class="ajudaOptionsItens"><a href="#">Opção1</a></div>
+            <div class="ajudaOptionsItens"><a href="#">Opção1</a></div>
         </div>
         
         <!-- perfil -->
@@ -24,9 +29,9 @@
         <!-- formulario e configs do no credenciamento -->
         <form id="formulario">
             <p>Endereço de email:</p>
-            <input id="email" name="email" type="email"/>
+            <input id="email" required name="email" type="email"/>
             <p>Senha:</p>
-            <input id="senha" name="senha" type="password"/>
+            <input id="senha" required name="senha" type="password"/>
             
             <div id="entrarComo">
                 <p id="">Entrar como <span>Online</span><span id="dropSimbolo" class="glyphicon glyphicon-triangle-bottom" id="ajudaOpcao"></span></p>

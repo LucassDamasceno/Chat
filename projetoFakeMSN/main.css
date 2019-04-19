@@ -22,6 +22,26 @@ body
     text-align: right;
 }
 
+#ajudaOptions
+{
+    background: rgba(227, 239,246,1);
+    position: absolute;
+    top: 3.5vh;
+    right: 5vh;
+    display: none;
+}
+
+#ajudaOptions > div
+{
+    display: block;
+    margin: 5px 10px;
+}
+
+#ajudaOptions > div > a
+{
+    text-decoration: none;
+}
+
 #framePerfil
 {
     display: block;
