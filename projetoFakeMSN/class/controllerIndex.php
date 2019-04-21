@@ -12,6 +12,7 @@ $lembraSenha  = isset($_REQUEST['lembraSenha']);
 if($email == "teste@tst.com" && $senha === "123456")
 {
     echo "Com permissão!";
+    header('Location: client/telaChat.html'); 
 }
 else
 {
