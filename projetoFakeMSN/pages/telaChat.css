@@ -1,0 +1,27 @@
+*{margin: 0; padding: 0;}
+.corpoDeDentro
+{
+    padding:0  120px !important;
+}
+.corpoDeDentro
+{
+    border: 2px solid black;
+    display: block;
+    position: relative;
+    margin: auto;
+    width: auto;
+}
+.fotoPerfil
+{
+    border: 1px solid red;
+    width: 15vw;
+    height: 15vw;
+    display: inline-block;
+}
+.areaConversa
+{
+    border: 1px solid red;
+    width: 35.5vw;
+    height: 15vw;
+    display: inline-block;
+}
