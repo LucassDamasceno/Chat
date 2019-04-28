@@ -1,0 +1,80 @@
+@charset "UTF-8";
+#top, #rodape
+{
+    background: url(../img/headerImg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#containerTop
+{
+    width: 35%;
+    display: block;
+    margin: 0 auto;
+}
+#containerTop #nomePrograma
+{
+    height: 5vh;
+}
+#containerTop #logomarca
+{
+    width:  15vw;
+    height: 15vw;
+    display: block;
+}
+#containerTop #logomarca img
+{
+    width: 15vw;
+}
+#containerTop #containerInfos
+{
+    width: 19.5vw;
+    display: inline-block;
+    float: right;
+    margin-top:-11vh;
+}
+#containerTop #containerInfos .infoHeader
+{
+    font-size: 8pt;
+    display: inline;
+}
+#containerTop #containerInfos #msgStatusheader
+{
+    font-size: 7pt;
+}
+#containerTop #statusOptionsHeader
+{
+    background: #fff;
+    text-align: right;
+    width: 10vw;
+    position: fixed;
+    right: 38vw;
+    top: 13vw;
+    font-size: 7pt;
+}
+
+#corpo #containerCorpo
+{
+    height: 64vh;
+    width: 35%;
+    display: block;
+    margin: 0 auto;
+}
+#corpo #containerCorpo ul li
+{
+    list-style: none;
+    margin-left: -3vw;
+}
+#corpo #containerCorpo ul li p
+{
+    font-size: 8pt;
+    display: inline;
+}
+#corpo #containerCorpo ul li p span.msgStatusContato
+{
+    font-size: 7pt;
+}
+
+#rodape
+{
+    height: 5vh;
+}
