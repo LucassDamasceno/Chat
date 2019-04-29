@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- style do projeto -->
         <link rel="stylesheet" href="main.css">
-        <title>FakeWindows Live</title>
+        <title>FakeWindows Live - TST</title>
         <script src="js/jquery-3.4.0.min.js" type="text/javascript"></script>
     </head>
     <body>
