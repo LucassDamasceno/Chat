@@ -12,18 +12,28 @@
     <script src="../js/jquery-3.4.0.min.js" type="text/javascript"></script>
 </head>
 <body>
-    <section id="corpo">
-        <div class="container corpoDeDentro">
-            <div id="remetenet">
-                <div class="fotoPerfil">peffil</div>
-                <div class="areaConversa">conversa</div>
-            </div>
-            <div id="destinatario">
-                <div class="fotoPerfil">peffil</div>
-                <div class="areaConversa">conversa</div>
-            </div>
+<section id="corpo">
+    <div class="container corpoDeDentro">
+        <div id="asd">
+        <div id="remetenet">
+        <div class="fotoPerfil">peffil</div>
+        <div class="areaConversa">
+        <div>
+        <p>Fuleragem69 <span>(Disponível)</span><br /> Mensagem fresca de indiretas aviada.</p>
         </div>
-    </section>
+        <div>
+        <p class="minhaMsg">iae</p>
+        <p class="contatoMsg">ooi</p>
+        </div>
+        </div>
+        </div>
+        <div id="destinatario">
+        <div class="fotoPerfil">peffil</div>
+        <div class="areaConversa">conversa</div>
+        </div>
+        </div>
+    </div>    
+</section>
 
     <!-- JavaScript do projeto -->
     <script src="telaChat.js" type="text/javascript"></script>
