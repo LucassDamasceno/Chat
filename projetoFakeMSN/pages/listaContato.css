@@ -17,13 +17,12 @@
 }
 #containerTop #logomarca
 {
-    width:  15vw;
-    height: 15vw;
+    height: 50px;
     display: block;
 }
 #containerTop #logomarca img
 {
-    width: 15vw;
+    height: 50px;
 }
 #containerTop #containerInfos
 {
@@ -74,7 +73,10 @@
     font-size: 7pt;
 }
 
+/*
 #rodape
 {
     height: 5vh;
+    margin-top: 95vh;
 }
+*/

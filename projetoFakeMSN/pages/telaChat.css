@@ -1,27 +1,114 @@
-*{margin: 0; padding: 0;}
-.corpoDeDentro
+*{margin:0;padding:0;}
+
+body
 {
-    padding:0  120px !important;
+    background-image: url(../img/bg_telaChat.png);
+    background-attachment: fixed;
+    background-size: cover;
 }
-.corpoDeDentro
+section
 {
-    border: 2px solid black;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 15vh;
+    overflow: hidden;
+}
+#containerGeral
+{
     display: block;
+    height: 70vh;
+    padding: 0 15vw;
+}
+#containerEsquedo
+{
+    display: block;
+    width: 21vw;
+    height: 70vh;
+}
+.perfil
+{
+    display: block;
+    width: 20vw;
+    height: 20vw;
+}
+.perfil img
+{
+    height: 25vh;
+}
+#ego
+{
+    margin-bottom: 18vh;
+}
+#containerDireito
+{
+    display: inline-block;
+    float: right;
+    width: 48vw;
     position: relative;
-    margin: auto;
+    top: -70vh;
+    height: 69vh;
+}
+#containerDireito .contInternoDireito
+{
+    display: block;
+    width: 100%;
+}
+#containerDireito #header
+{
+    height:13vh;
+}
+#containerDireito #header #nick
+{
+    font-size: 4vh;
+    font-weight: 600;
+}
+#containerDireito #header #status{}
+#containerDireito #body
+{
+    height:35vh;
+    overflow-y: scroll;
+}
+#containerDireito #body #msgEu
+{
+    display: inline-block;
     width: auto;
+    background: #B1E3F5;
+    padding: 2px 5px;
+    border-radius: 4px;
+    position: relative;
+    right: -35vw;
 }
-.fotoPerfil
+#containerDireito #body #msgTu
 {
-    border: 1px solid red;
-    width: 15vw;
-    height: 15vw;
     display: inline-block;
+    width: auto;
+    background: #E4F6FC;
+    padding: 2px 5px;
+    border-radius: 4px;
 }
-.areaConversa
+#containerDireito #footer
 {
-    border: 1px solid red;
-    width: 35.5vw;
-    height: 15vw;
-    display: inline-block;
+    height:20vh;
+    padding: 5vh 4vw;
+}
+#containerDireito #footer form input
+{
+    width: 40vw;
+    height: 10vh;
+    padding-right: 5vw;
+    background: #C4EAF8;
+    border: none;
+    border-radius: 8px;
+}
+#containerDireito #footer form button
+{
+    width: 5vw;
+    height: 10vh;
+    position: relative;
+    top: -10vh;
+    left: 35vw;
+    background: #E8F5FA;
+    border: none;
+    border-radius: 0px 8px 8px 0;
+    color: #47BEE8;
 }

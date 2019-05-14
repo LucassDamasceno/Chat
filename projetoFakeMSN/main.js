@@ -2,7 +2,6 @@ function validaDados()
 {
     document.formulario.subimit();
 }
-//document.getElementById("ajudaIcon").onclick = function() {alert("asffad")};
 
 $("#ajudaIcon").click(function(){
     $("#ajudaOptions").toggle(400);

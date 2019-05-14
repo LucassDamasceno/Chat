@@ -12,27 +12,48 @@
     <script src="../js/jquery-3.4.0.min.js" type="text/javascript"></script>
 </head>
 <body>
-<section id="corpo">
-    <div class="container corpoDeDentro">
-        <div id="asd">
-            <div id="remetenet">
-                <div class="fotoPerfil">peffil</div>
-                <div class="areaConversa">
-                    <div>
-                        <p>Fuleragem69 <span>(Disponível)</span><br /> Mensagem fresca de indiretas aviada.</p>
-                    </div>
-                    <div>
-                        <p class="minhaMsg">iae</p>
-                        <p class="contatoMsg">ooi</p>
-                    </div>
-                </div>
+<section>
+    <div id="containerGeral">
+        <div id="containerEsquedo">
+            <div class="perfil" id="ego">
+                <img src="../img/frameOnline.png"/>
             </div>
-            <div id="destinatario">
-                <div class="fotoPerfil">peffil</div>
-                <div class="areaConversa">conversa</div>
+            <div class="perfil" id="eros">
+                <img src="../img/frameOnline.png"/>
             </div>
         </div>
-    </div>    
+        <div id="containerDireito">
+            <div class="contInternoDireito" id="header">
+                <p>
+                <span class="nickStatus" id="nick">Fuleragem69</span>
+                <span class="nickStatus" id="status">(status)</span>
+                    <!--<?php echo $nick ?>-->
+                    <!--<?php echo $status ?>-->
+                </p>
+                <p id="bio">
+                    Mensagem fresca de indiretas aviadadas
+                </p>
+            </div>
+            
+            <div class="contInternoDireito" id="body">
+                <p id="msgEu">bora tc</p><br/>
+                <p id="msgTu">boooora</p><br/>
+                <p id="msgEu">bora tc</p><br/>
+                <p id="msgTu">boooora</p><br/>
+                <p id="msgEu">bora tc</p><br/>
+                <p id="msgTu">boooora</p><br/>
+                <p id="msgEu">bora tc</p><br/>
+                <p id="msgTu">booooras</p><br/>
+            </div>
+            
+            <div class="contInternoDireito" id="footer">
+                <form>
+                    <input type="textarea" col="5"/>
+                    <button type="submit"><span class="glyphicon glyphicon-send"><span></button>
+                </form>
+            </div>
+        </div>
+    </div>
 </section>
 
     <!-- JavaScript do projeto -->

@@ -6,40 +6,11 @@ body
 }
 #containerPrincipal
 {
-    margin: 0 34%;
-    padding: 2% 5%;
-}
-
-#ajuda
-{
-    margin: 0 auto;
-    font-size: 8pt;
-}
-#ajuda p
-{
-    position: relative;
-    top: -10px;
-    text-align: right;
-}
-
-#ajudaOptions
-{
-    background: rgba(227, 239,246,1);
-    position: absolute;
-    top: 3.5vh;
-    right: 5vh;
-    display: none;
-}
-
-#ajudaOptions > div
-{
     display: block;
-    margin: 5px 10px;
-}
-
-#ajudaOptions > div > a
-{
-    text-decoration: none;
+    margin: 0 auto;
+    height: 100vh;
+    padding: 0 5vw;
+    border: 1px solid red;
 }
 
 #framePerfil
@@ -56,7 +27,7 @@ body
     font-size: 8pt;
 }
 
-#formulario #senha, #email
+#formulario #nickname
 {
     width: 100%;
     margin-bottom: 5%;
@@ -67,28 +38,25 @@ body
 
 #formulario #entrarComo #statusOptions
 {
-    display: none;
-    text-align: right;
-    position: absolute;
-    right: 14vw;
+    display: inline-block;
     background: #fff;
+    width: 10vw;
+    border: none;
     width: 10vw;
 }
 
-#das
+@media (max-width: 700px)
 {
-    margin-top: 8vh;
-}
-#formulario #entrarComo #statusOptions .statusOptionsItens
-{
-    margin: 0.5vh 0;
+    #formulario #entrarComo #statusOptions
+    {
+        width: 40vw;
+    }
 }
 
-.lembretes p
+#formulario p
 {
     display: inline-block;
 }
-
 #formulario button
 {
     background: linear-gradient(to right, #94C8F2, #fff);
@@ -99,10 +67,23 @@ body
     margin: 10% auto 20% auto;
 }
 
+@media (max-width: 700px)
+{
+    #formulario #entrarComo #statusOptions
+    {
+        width: 40vw;
+    }
+}
+@media (max-width: 700px)
+{
+    #rodape
+    {
+        margin-top: 18vh;
+    }
+}
 #rodape
 {
-    margin-top: 40%;
-    margin-bottom: 0%;
+   margin-top: 45vh;
 }
     #rodape .logoMSN
 {

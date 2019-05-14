@@ -12,52 +12,27 @@
         <script src="js/jquery-3.4.0.min.js" type="text/javascript"></script>
     </head>
     <body>
-    <div class="col-sm-4 col-md-3 col-lg-3" id="containerPrincipal">
-        <!-- ajuda -->
-        <div id="ajuda" class="">
-            <p for="ajudaIcon" class="">Ajuda
-            <span class="glyphicon glyphicon-triangle-bottom" id="ajudaIcon"></span>
-            </p>
-        </div>
-        <div id="ajudaOptions">
-            <div class="ajudaOptionsItens"><a href="#">Dúvida</a></div>
-            <div class="ajudaOptionsItens"><a href="#">Cotate-nos</a></div>
-        </div>
-        
+    <div class="col-sm-1 col-md-4 col-lg-4"></div>    
+    <div class="col-sm-10 col-md-4 col-lg-4" id="containerPrincipal">
         <!-- perfil -->
         <div id="perfil">
             <img id="framePerfil" src="img/frameOnline.png"/>
         </div>
 
         <!-- formulario e configs do no credenciamento -->
-        <form id="formulario" name="formulario" method="post" action="class/controllerIndex.php">
-            <p for="email">Endereço de email:</p>
-            <input id="email" required name="email" type="email"/>
-            <p for="senha">Senha:</p>
-            <input id="senha" required name="senha" type="password"/>
-            
+        <form id="formulario" name="formulario" method="post" action="pages/listaContato.php">
+            <p for="nickname">Nickname:</p>
+            <input id="nickname" required name="nickname" type="text"/>
+                        
             <div id="entrarComo">
-                <p id="">Entrar como <span id="statusCurrent">Invisível</span><span id="dropSimbolo" class="glyphicon glyphicon-triangle-bottom" id="ajudaOpcao"></span></p>
-                <!-- Status static mas tem que alterar para dinamico -->
-                <input type="hidden" id="status" name="status" value="Invisível" />
-                <div id="statusOptions">
-                    <div class="statusOptionsItens"onclick="escolheStatus('Online')"><p>Online</p></div>
-                    <div class="statusOptionsItens"onclick="escolheStatus('Offline')"><p>Offline</p></div>
-                    <div class="statusOptionsItens"onclick="escolheStatus('Invisível')"><p>Invisível</p></div>
-                </div>
-                
-                <div id="das" class="lembretes">
-                    <input id="lembra" class="" type="checkbox" name="lembra"/>
-                    <p class="">Lembrar-me:</p>
-                </div>
-                
-                <div class="lembretes">
-                    <input id="lembraSenha" class="" type="checkbox" name="lembraSenha"/>
-                    <p>Lembrar minha senha:</p>
-                </div>
+                <p id="">Entrar como</p>
+                <select id="statusOptions" name="status">
+                    <option value="1" >Online</option>
+                    <option value="0">Offline</option>
+                </select>
 
                 <button id="" onclick="validaDados()" name="">Entrar</button>
-
+            </div>
         </form>
         
         <!-- rodape -->
@@ -66,6 +41,7 @@
             <p>FakeWindows Live</p>
         </div>
     </div>
+    <div class="col-sm-1 col-md-4 col-lg-4"></div>    
 
     <!-- JavaScript do projeto -->
     <script src="main.js"></script>
