@@ -4,12 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="img/logoMSN.png" />
-        <!-- style do bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!-- style do projeto -->
         <link rel="stylesheet" href="main.css">
         <title>FakeWindows Live</title>
-        <script src="js/jquery-3.4.0.min.js" type="text/javascript"></script>
     </head>
     <body>
     <div class="col-sm-1 col-md-4 col-lg-4"></div>    
@@ -18,23 +15,19 @@
         <div id="perfil">
             <img id="framePerfil" src="img/frameOnline.png"/>
         </div>
-
         <!-- formulario e configs do no credenciamento -->
         <form id="formulario" name="formulario" method="post" action="pages/listaContato.php">
             <p for="nickname">Nickname:</p>
-            <input id="nickname" required name="nickname" type="text"/>
-                        
+            <input id="nickname" required name="nickname" type="text"/>          
             <div id="entrarComo">
                 <p id="">Entrar como</p>
                 <select id="statusOptions" name="status">
                     <option value="1" >Online</option>
                     <option value="0">Offline</option>
                 </select>
-
                 <button id="" onclick="validaDados()" name="">Entrar</button>
             </div>
         </form>
-        
         <!-- rodape -->
         <div id="rodape">
             <img class="logoMSN" src="img/logoMSN.png"/>
