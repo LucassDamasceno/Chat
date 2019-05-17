@@ -7,6 +7,7 @@
 
     //busca os usrs para mostrar na lista de contatos
     $queryConsulta  = 'SELECT nickname FROM usuarios';
+    $total_registros =  $mysqli->query('SELECT count(*) FROM usuarios') or die ($mysqli->error);
     $buscaNoBD = $mysqli->query($queryConsulta) or die ($mysqli->error);
 
     //verifica se dar ou nao permissao para criar um novo NICKNAME
@@ -69,7 +70,7 @@
 
     <section id="corpo">
         <div id="containerCorpo">
-            <h5>Contatos<span>(23)</span></h5>
+            <h5>Contatos<span>(<?php echo $total_registros?>)</span></h5>
             <ul>
                 <?php chamaUsuarios() ?>
             </ul>
