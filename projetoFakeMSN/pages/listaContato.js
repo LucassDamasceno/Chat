@@ -7,5 +7,4 @@
 
 function startChat(){
     console.log('iniciar chat');
-    
 }
