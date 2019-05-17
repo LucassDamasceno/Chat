@@ -6,9 +6,9 @@
     $status = $_REQUEST["status"];
 
     //busca os usrs para mostrar na lista de contatos
-    $queryConsulta  = 'SELECT nickname FROM usuarios';
-    $total_registros =  $mysqli->query('SELECT count(*) FROM usuarios') or die ($mysqli->error);
+    $queryConsulta  = 'SELECT nickname FROM usuarios';  
     $buscaNoBD = $mysqli->query($queryConsulta) or die ($mysqli->error);
+    $data= $buscaNoBD->num_rows;
 
     //verifica se dar ou nao permissao para criar um novo NICKNAME
     $permissao = true;
@@ -23,13 +23,35 @@
     //cria o novo NICKNAME se houver permissao
     if($permissao == true)
     {
-        $insereNick = "INSERT  INTO  usuarios  (nickname)  VALUES  ( '$nick');";
-        $mysqli->query($insereNick) or die ($mysqli->error);
+        // $insereNick = "INSERT  INTO  usuarios  (nickname)  VALUES  ( '$nick');";
+        // $mysqli->query($insereNick) or die ($mysqli->error);
     }
     else
     {
-        echo "Nickname já está em uso. Volte e escolha outro Nickname.";
-        header("Location: ../index.php");
+        // echo "Nickname já está em uso. Volte e escolha outro Nickname.";
+        // header("Location: ../index.php");
+    }
+
+
+    function listaUsuarios(){
+        global $mysqli;
+        global $nick;
+
+        $queryConsulta  = 'SELECT id ,nickname FROM usuarios';
+        $consulta = $mysqli->query($queryConsulta) or die ($mysqli->error);
+        foreach($consulta as $usr)
+        {
+            
+            echo "<li>
+            <a href='telaChat.php' onclick='startChat()' target='blank'><img src='../img/logoMSN.png' 
+            width='20'/>
+            <p>$usr[nickname]
+                <span> - </span>
+                <span class='msgStatusContato'>
+                No dos outros é refresco</span>
+            </p>
+            </li></a>";
+        }
     }
 ?>
 
@@ -70,21 +92,14 @@
 
     <section id="corpo">
         <div id="containerCorpo">
-            <h5>Contatos<span>(<?php echo $total_registros?>)</span></h5>
+            <h5>Contatos<span>(<?php echo $data ?>)</span></h5>
             <ul>
-                <?php chamaUsuarios() ?>
+                <?php listaUsuarios() ?>
             </ul>
         </div>
     </section>
 
-    <!--<footer id="rodape"></footer>-->
-
-    <!-- JavaScript do projeto -->
-    <script src="listaContato.js" type="text/javascript"></script>
-    <!-- 
-        <script src="../main.js"></script>
-    -->
-    <!-- jQuery primeiro e Bootstrap JS -->
+    <script src="listaContato" type="text/javascript"></script>
     <script src="../js/jquery-3.4.0.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="../js/bootstrap.min.js" ></script>
