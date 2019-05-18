@@ -1,6 +1,5 @@
 <?php
     include("../classe/conexao.php");
-    include("../classe/Socketon.php");
     //recebe nickname e status do INDEX
     $nick = $_REQUEST["nickname"];
     $status = $_REQUEST["status"];
@@ -23,15 +22,14 @@
     //cria o novo NICKNAME se houver permissao
     if($permissao == true)
     {
-        // $insereNick = "INSERT  INTO  usuarios  (nickname)  VALUES  ( '$nick');";
-        // $mysqli->query($insereNick) or die ($mysqli->error);
+        $insereNick = "INSERT  INTO  usuarios  (nickname)  VALUES  ( '$nick');";
+        $mysqli->query($insereNick) or die ($mysqli->error);
     }
     else
     {
         // echo "Nickname já está em uso. Volte e escolha outro Nickname.";
         // header("Location: ../index.php");
     }
-
 
     function listaUsuarios(){
         global $mysqli;
@@ -42,7 +40,7 @@
         foreach($consulta as $usr)
         {
             echo "<li>
-            <a href='telaChat.php?idUser=lucasDamascenoDaSilva' target='blank'><img src='../img/logoMSN.png' 
+            <a href='telaChat.php?idUser=$usr[id]' target='blank'><img src='../img/logoMSN.png' 
             width='20'/>
             <p>$usr[nickname]
                 <span>  - </span>

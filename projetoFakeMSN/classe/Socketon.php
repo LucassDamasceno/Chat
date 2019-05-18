@@ -9,33 +9,29 @@ require_once '../lib/vendor/autoload.php';
 class Chat implements MessageComponentInterface {
 	protected $clients;
 	protected $users;
-
 	public function __construct() {
 		$this->clients = new \SplObjectStorage;
 	}
-
 	public function onOpen(ConnectionInterface $conn) {
 		$this->clients->attach($conn);
 		// $this->users[$conn->resourceId] = $conn;
 	}
-
 	public function onClose(ConnectionInterface $conn) {
 		$this->clients->detach($conn);
 		// unset($this->users[$conn->resourceId]);
 	}
-
 	public function onMessage(ConnectionInterface $from,  $data) {
 		$from_id = $from->resourceId;
 		$data = json_decode($data);
 		$type = $data->type;
 		switch ($type) {
-			case 'chatt':
+			case 'chat':
 				$user_id = $data->user_id;
 				$chat_msg = $data->chat_msg;
-				$response_from = "<span style='color:#999'><b>".$user_id.":</b> ".$chat_msg."</span><br><br>";
+				$response_from = $chat_msg;
 				$response_to = "<b>".$user_id."</b>: ".$chat_msg."<br><br>";
 				// Output
-				$from->send(json_encode(array("type"=>$type,"msg"=>$response_from)));
+				$from->send(json_encode(array("type"=>$type,"msg"=>$response_from,'id'=>$user_id)));
 				foreach($this->clients as $client)
 				{
 					if($from!=$client)
@@ -46,7 +42,6 @@ class Chat implements MessageComponentInterface {
 				break;
 		}
 	}
-
 	public function onError(ConnectionInterface $conn, \Exception $e) {
 		$conn->close();
 	}

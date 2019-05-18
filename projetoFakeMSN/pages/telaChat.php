@@ -1,3 +1,18 @@
+<?php
+    include("../classe/conexao.php");
+    $idUser = $_GET['idUser'];
+    
+    $queryConsulta  = 'SELECT id ,nickname FROM usuarios';
+    $consulta = $mysqli->query($queryConsulta) or die ($mysqli->error);
+
+    foreach($consulta as $usr)
+    {
+       if($usr['id'] == $idUser){
+         $nick = $usr['nickname'];
+       }
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,27 +41,15 @@
             <div id="containerDireito">
                 <div class="contInternoDireito" id="header">
                     <p>
-                    <span class="nickStatus" id="nick">Fuleragem69</span>
+                    <span class="nickStatus" id="nick"><?php echo $nick ?></span>
                     <span class="nickStatus" id="status">(status)</span>
-                        <!--<?php echo $nick ?>-->
                         <!--<?php echo $status ?>-->
                     </p>
                     <p id="bio">
                         Mensagem fresca de indiretas aviadadas
                     </p>
                 </div>
-                
-                <div class="contInternoDireito" id="chat_output">
-                    <!-- <p id="msgEu">bora tc</p><br/>
-                    <p id="msgTu">boooora</p><br/>
-                    <p id="msgEu">bora tc</p><br/>
-                    <p id="msgTu">boooora</p><br/>
-                    <p id="msgEu">bora tc</p><br/>
-                    <p id="msgTu">boooora</p><br/>
-                    <p id="msgEu">bora tc</p><br/>
-                    <p id="msgTu">booooras</p><br/> -->
-                </div>
-                
+                <div class="contInternoDireito" id="chat_output"></div>
                 <div class="contInternoDireito" id="footer">
                     <input type="textarea" col="5" id="chat_input"/>
                     <button type="submit"><span class="glyphicon glyphicon-send"><span></button>
