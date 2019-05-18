@@ -5,6 +5,6 @@
 // });
 
 
-function startChat(){
-    console.log('iniciar chat');
+function startChat(id){
+    console.log(id);
 }

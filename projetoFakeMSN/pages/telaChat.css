@@ -63,12 +63,12 @@ section
     font-weight: 600;
 }
 #containerDireito #header #status{}
-#containerDireito #body
+#containerDireito #chat_output
 {
     height:35vh;
     overflow-y: scroll;
 }
-#containerDireito #body #msgEu
+#containerDireito #chat_output #msgEu
 {
     display: inline-block;
     width: auto;
@@ -78,7 +78,7 @@ section
     position: relative;
     right: -35vw;
 }
-#containerDireito #body #msgTu
+#containerDireito #chat_output #msgTu
 {
     display: inline-block;
     width: auto;
@@ -91,7 +91,7 @@ section
     height:20vh;
     padding: 5vh 4vw;
 }
-#containerDireito #footer form input
+#containerDireito #footer  input
 {
     width: 40vw;
     height: 10vh;
@@ -100,7 +100,7 @@ section
     border: none;
     border-radius: 8px;
 }
-#containerDireito #footer form button
+#containerDireito #footer  button
 {
     width: 5vw;
     height: 10vh;

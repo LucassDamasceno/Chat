@@ -41,12 +41,11 @@
         $consulta = $mysqli->query($queryConsulta) or die ($mysqli->error);
         foreach($consulta as $usr)
         {
-            
             echo "<li>
-            <a href='telaChat.php' onclick='startChat()' target='blank'><img src='../img/logoMSN.png' 
+            <a href='telaChat.php?idUser=lucasDamascenoDaSilva' target='blank'><img src='../img/logoMSN.png' 
             width='20'/>
             <p>$usr[nickname]
-                <span> - </span>
+                <span>  - </span>
                 <span class='msgStatusContato'>
                 No dos outros é refresco</span>
             </p>

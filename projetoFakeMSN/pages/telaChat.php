@@ -10,52 +10,51 @@
     <link rel="stylesheet" href="telaChat.css">
     <title>FakeWindows Live</title>
     <script src="../js/jquery-3.4.0.min.js" type="text/javascript"></script>
+
 </head>
 <body>
-<section>
-    <div id="containerGeral">
-        <div id="containerEsquedo">
-            <div class="perfil" id="ego">
-                <img src="../img/frameOnline.png"/>
+    <section>
+        <div id="containerGeral">
+            <div id="containerEsquedo">
+                <div class="perfil" id="ego">
+                    <img src="../img/frameOnline.png"/>
+                </div>
+                <div class="perfil" id="eros">
+                    <img src="../img/frameOnline.png"/>
+                </div>
             </div>
-            <div class="perfil" id="eros">
-                <img src="../img/frameOnline.png"/>
-            </div>
-        </div>
-        <div id="containerDireito">
-            <div class="contInternoDireito" id="header">
-                <p>
-                <span class="nickStatus" id="nick">Fuleragem69</span>
-                <span class="nickStatus" id="status">(status)</span>
-                    <!--<?php echo $nick ?>-->
-                    <!--<?php echo $status ?>-->
-                </p>
-                <p id="bio">
-                    Mensagem fresca de indiretas aviadadas
-                </p>
-            </div>
-            
-            <div class="contInternoDireito" id="body">
-                <p id="msgEu">bora tc</p><br/>
-                <p id="msgTu">boooora</p><br/>
-                <p id="msgEu">bora tc</p><br/>
-                <p id="msgTu">boooora</p><br/>
-                <p id="msgEu">bora tc</p><br/>
-                <p id="msgTu">boooora</p><br/>
-                <p id="msgEu">bora tc</p><br/>
-                <p id="msgTu">booooras</p><br/>
-            </div>
-            
-            <div class="contInternoDireito" id="footer">
-                <form>
-                    <input type="textarea" col="5"/>
+            <div id="containerDireito">
+                <div class="contInternoDireito" id="header">
+                    <p>
+                    <span class="nickStatus" id="nick">Fuleragem69</span>
+                    <span class="nickStatus" id="status">(status)</span>
+                        <!--<?php echo $nick ?>-->
+                        <!--<?php echo $status ?>-->
+                    </p>
+                    <p id="bio">
+                        Mensagem fresca de indiretas aviadadas
+                    </p>
+                </div>
+                
+                <div class="contInternoDireito" id="chat_output">
+                    <!-- <p id="msgEu">bora tc</p><br/>
+                    <p id="msgTu">boooora</p><br/>
+                    <p id="msgEu">bora tc</p><br/>
+                    <p id="msgTu">boooora</p><br/>
+                    <p id="msgEu">bora tc</p><br/>
+                    <p id="msgTu">boooora</p><br/>
+                    <p id="msgEu">bora tc</p><br/>
+                    <p id="msgTu">booooras</p><br/> -->
+                </div>
+                
+                <div class="contInternoDireito" id="footer">
+                    <input type="textarea" col="5" id="chat_input"/>
                     <button type="submit"><span class="glyphicon glyphicon-send"><span></button>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
+    <?php include("telaChatController.php")?>
     <!-- JavaScript do projeto -->
     <script src="telaChat.js" type="text/javascript"></script>
     <!-- jQuery primeiro e Bootstrap JS -->
@@ -64,3 +63,6 @@
     <script src="../js/bootstrap.min.js" ></script>
 </body>
 </html>
+
+
+ 
