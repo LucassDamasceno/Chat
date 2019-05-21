@@ -23,12 +23,13 @@
             var json = JSON.parse(e.data);
             switch(json.type) {
                 case 'chat':
+
                     if(json.id == <?php echo $idUser ?> ){
-                        $('#chat_output').append("<p id='msgEu'>"+json.msg+"</p><br/>");
-                  
+                    $('#chat_output').append("<p id='msgEu'>"+json.msg+"</p><br/>");
                     }else{
                         $('#chat_output').append("<p id='msgTu'>"+json.msg+"</p><br/>");
                     }
+        
                     break;
             }
         }

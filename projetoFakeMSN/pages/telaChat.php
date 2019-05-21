@@ -1,6 +1,7 @@
 <?php
     include("../classe/conexao.php");
     $idUser = $_GET['idUser'];
+    $myId = $_GET['myId'];
     
     $queryConsulta  = 'SELECT id ,nickname FROM usuarios';
     $consulta = $mysqli->query($queryConsulta) or die ($mysqli->error);
@@ -32,10 +33,10 @@
         <div id="containerGeral">
             <div id="containerEsquedo">
                 <div class="perfil" id="ego">
-                    <img src="../img/frameOnline.png"/>
+                    <img src="../img/frameUserUm.png"/>
                 </div>
                 <div class="perfil" id="eros">
-                    <img src="../img/frameOnline.png"/>
+                    <img src="../img/frameUserDois.png"/>
                 </div>
             </div>
             <div id="containerDireito">

@@ -13,7 +13,7 @@
     <div class="col-sm-10 col-md-4 col-lg-4" id="containerPrincipal">
         <!-- perfil -->
         <div id="perfil">
-            <img id="framePerfil" src="img/frameOnline.png"/>
+            <img id="framePerfil" src="img/frameUserPrincipal.png"/>
         </div>
         <!-- formulario e configs do no credenciamento -->
         <form id="formulario" name="formulario" method="post" action="pages/listaContato.php">

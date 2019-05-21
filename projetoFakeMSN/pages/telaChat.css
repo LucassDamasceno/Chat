@@ -96,8 +96,8 @@ section
     width: 40vw;
     height: 10vh;
     padding-right: 5vw;
-    background: #C4EAF8;
-    border: none;
+    background: rgb(255, 255, 255);
+    border: 1px rgb(107, 167, 182)  solid;
     border-radius: 8px;
 }
 #containerDireito #footer  button
@@ -110,5 +110,5 @@ section
     background: #E8F5FA;
     border: none;
     border-radius: 0px 8px 8px 0;
-    color: #47BEE8;
+    color: rgb(255, 255, 255);
 }

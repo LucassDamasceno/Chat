@@ -34,4 +34,6 @@ function escolheStatus(status)
     elemento.innerHTML = status;
     elementoInputPhp.value = status;
     $("#statusOptions").toggle();
+
+    
 }

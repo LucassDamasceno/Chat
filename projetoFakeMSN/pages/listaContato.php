@@ -7,7 +7,7 @@
     //busca os usrs para mostrar na lista de contatos
     $queryConsulta  = 'SELECT nickname FROM usuarios';  
     $buscaNoBD = $mysqli->query($queryConsulta) or die ($mysqli->error);
-    $data= $buscaNoBD->num_rows;
+    $quantContatos= $buscaNoBD->num_rows;
 
     //verifica se dar ou nao permissao para criar um novo NICKNAME
     $permissao = true;
@@ -22,25 +22,31 @@
     //cria o novo NICKNAME se houver permissao
     if($permissao == true)
     {
-        $insereNick = "INSERT  INTO  usuarios  (nickname)  VALUES  ( '$nick');";
-        $mysqli->query($insereNick) or die ($mysqli->error);
+        // $insereNick = "INSERT  INTO  usuarios  (nickname)  VALUES  ( '$nick');";
+        // $mysqli->query($insereNick) or die ($mysqli->error);
     }
     else
     {
-        echo "Nickname já está em uso. Volte e escolha outro Nickname.";
-        header("Location: ../index.php");
+        // echo "Nickname já está em uso. Volte e escolha outro Nickname.";
+        // header("Location: ../index.php");
     }
 
     function listaUsuarios(){
         global $mysqli;
         global $nick;
+        global $myId;
 
         $queryConsulta  = 'SELECT id ,nickname FROM usuarios';
         $consulta = $mysqli->query($queryConsulta) or die ($mysqli->error);
         foreach($consulta as $usr)
         {
+            //para não mostrar meu contato na minha propria lista de contatos
+            if($nick == $usr["nickname"]){
+                $myId = $usr["id"];
+                continue;
+            }
             echo "<li>
-            <a href='telaChat.php?idUser=$usr[id]' target='blank'><img src='../img/logoMSN.png' 
+            <a href='telaChat.php?idUser=$usr[id]&myId=$myId' target='blank'><img src='../img/logoMSN.png' 
             width='20'/>
             <p>$usr[nickname]
                 <span>  - </span>
@@ -70,7 +76,7 @@
                 FakeWindows Live
             </div>
             <div id="logomarca">
-                <img src="../img/frameOnline.png"/>
+                <img src="../img/frameUserContatos.png"/>
             </div>
             <div id="containerInfos">
                 <p class="infoHeader"><?php $nickname ?></p>
@@ -89,7 +95,7 @@
 
     <section id="corpo">
         <div id="containerCorpo">
-            <h5>Contatos<span>(<?php echo $data ?>)</span></h5>
+            <h5>Contatos<span>(<?php echo $quantContatos - 1 ?>)</span></h5>
             <ul>
                 <?php listaUsuarios() ?>
             </ul>
