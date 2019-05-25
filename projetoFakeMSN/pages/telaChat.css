@@ -67,6 +67,9 @@ section
 {
     height:35vh;
     overflow-y: scroll;
+    border: 1px rgb(107, 167, 182)  solid;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 1px rgb(107, 167, 182);
 }
 #containerDireito #chat_output #msgEu
 {
@@ -84,7 +87,7 @@ section
     width: auto;
     background: #E4F6FC;
     padding: 2px 5px;
-    border-radius: 4px;
+    border-radius: 4px; 
 }
 #containerDireito #footer
 {

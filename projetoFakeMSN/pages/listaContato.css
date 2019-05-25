@@ -14,6 +14,7 @@
 #containerTop #nomePrograma
 {
     height: 5vh;
+    margin-top: 5px;
 }
 #containerTop #logomarca
 {
@@ -39,6 +40,7 @@
 #containerTop #containerInfos #msgStatusheader
 {
     font-size: 7pt;
+    margin-top: 30px;
 }
 #containerTop #statusOptionsHeader
 {
@@ -71,6 +73,10 @@
 #corpo #containerCorpo ul li p span.msgStatusContato
 {
     font-size: 7pt;
+}
+#corpo #containerCorpo h5
+{
+    margin-top: 40px;
 }
 
 /*
