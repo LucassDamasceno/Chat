@@ -47,7 +47,7 @@
                         <!--<?php echo $status ?>-->
                     </p>
                     <p id="bio">
-                        Mensagem fresca de indiretas aviadadas
+                        Mensagem fresca de indiretas aviadadas 
                     </p>
                 </div>
                 <div class="contInternoDireito" id="chat_output"></div>

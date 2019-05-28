@@ -27,8 +27,8 @@
     }
     else
     {
-        // echo "Nickname já está em uso. Volte e escolha outro Nickname.";
-        // header("Location: ../index.php");
+        echo "Nickname já está em uso. Volte e escolha outro Nickname.";
+        header("Location: ../index.php");
     }
 
     function listaUsuarios(){
@@ -39,6 +39,7 @@
         $queryConsulta  = 'SELECT id ,nickname FROM usuarios';
         $consulta = $mysqli->query($queryConsulta) or die ($mysqli->error);
 
+<<<<<<< HEAD
 
         foreach($consulta as $usr){
             if($nick == $usr["nickname"]){
@@ -47,6 +48,8 @@
             }
         }
 
+=======
+>>>>>>> bb8a70c96d9a55a2e3c9c4505a86b2a1de3485ae
         foreach($consulta as $usr)
         {
             //para não mostrar meu contato na minha propria lista de contatos
@@ -86,7 +89,7 @@
                 FakeWindows Live
             </div>
             <div id="logomarca">
-                <img src="../img/frameUserContatos.png"/>
+                <img src="../img/frameUserDois.png"/>
             </div>
             <div id="containerInfos">
                 <p class="infoHeader"><?php $nickname ?></p>
