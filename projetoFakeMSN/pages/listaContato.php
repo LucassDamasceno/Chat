@@ -27,8 +27,8 @@
     }
     else
     {
-        echo "Nickname já está em uso. Volte e escolha outro Nickname.";
-        header("Location: ../index.php");
+        // echo "Nickname já está em uso. Volte e escolha outro Nickname.";
+        // header("Location: ../index.php");
     }
 
     function listaUsuarios(){
