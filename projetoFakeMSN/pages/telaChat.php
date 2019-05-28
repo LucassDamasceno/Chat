@@ -1,4 +1,4 @@
-<?php
+ <?php
     include("../classe/conexao.php");
     $idUser = $_GET['idUser'];
     $myId = $_GET['myId'];
@@ -12,7 +12,7 @@
          $nick = $usr['nickname'];
        }
     }
-?>
+?> 
 
 <!DOCTYPE html>
 <html>

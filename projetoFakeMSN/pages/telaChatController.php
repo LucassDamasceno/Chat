@@ -1,9 +1,13 @@
 <?php
     include("../classe/conexao.php");
     $idUser = $_GET['idUser'];
+    $myId   = $_GET['myId'];
+
+    //echo "<script> alert($myId) </script>";
 ?>
 <script>
     idUser = '<?php echo $idUser ?>'
+    enter = false;
     jQuery(function($){
         controleMsg = true
       // Websocket
@@ -19,17 +23,21 @@
         websocket_server.onerror = function(e) {
             // Errorhandling
         }
+        //  alert(<?php echo $myId ?>);
         websocket_server.onmessage = function(e){
             var json = JSON.parse(e.data);
+           
             switch(json.type) {
                 case 'chat':
-
-                    if(json.id == <?php echo $idUser ?> ){
-                    $('#chat_output').append("<p id='msgEu'>"+json.msg+"</p><br/>");
-                    }else{
-                        $('#chat_output').append("<p id='msgTu'>"+json.msg+"</p><br/>");
-                    }
-        
+                        if(json.id == <?php echo $idUser ?> && enter == true){
+                            $('#chat_output').append("<p id='msgEu'>"+json.msg+"</p><br/>");
+                        }else{
+                            if(<?php echo $myId ?> == json.id ){
+                                $('#chat_output').append("<p id='msgTu'>"+json.msg+"</p><br/>");
+                               
+                            }
+                        }
+                 
                     break;
             }
         }
@@ -38,6 +46,7 @@
             if(e.keyCode==13 && !e.shiftKey){
                 controleMsg = false
                 var chat_msg = $(this).val();
+                enter = true;
                 websocket_server.send(
                     JSON.stringify({
                         'type':'chat',

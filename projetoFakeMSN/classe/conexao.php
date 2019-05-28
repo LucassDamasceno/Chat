@@ -12,4 +12,4 @@ if($mysqli->connect_errno)
     echo "Falha na conexão: (" . $mysqli->connect_errno.")" . $mysql->connect_error;
 }
 
-?>
+?> 

@@ -14,12 +14,12 @@ class Chat implements MessageComponentInterface {
 	}
 	public function onOpen(ConnectionInterface $conn) {
 		$this->clients->attach($conn);
-		$this->users[$conn->resourceId] = $conn;
+		//$this->users[$conn->resourceId] = $conn;
 		echo "New connection! ({$conn->resourceId})\n";
 	}
 	public function onClose(ConnectionInterface $conn) {
 		$this->clients->detach($conn);
-		unset($this->users[$conn->resourceId]);
+	//	unset($this->users[$conn->resourceId]);
 	}
 	public function onMessage(ConnectionInterface $from,  $data) {
 		$from_id = $from->resourceId;
@@ -33,14 +33,17 @@ class Chat implements MessageComponentInterface {
 				$response_from = $chat_msg;
 				$response_to = "<b>".$user_id."</b>: ".$chat_msg."<br><br>";
 				// Output
-				$from->send(json_encode(array("type"=>$type,"msg"=>$response_from,'id'=>$user_id)));
+				//$from->send(json_encode(array("type"=>$type,"msg"=>$response_from,'id'=>$user_id)));
 
 				foreach($this->clients as $client)
 				{
-					if($from!=$client)
-					{
-						$client->send(json_encode(array("type"=>$type,"msg"=>$response_to)));
-					}
+					$client->send(json_encode(array("type"=>$type,"msg"=>$response_from,'id'=>$user_id)));
+					// if($from!=$client)
+					// {
+					// 	$client->send(json_encode(array("type"=>$type,"msg"=>$response_to)));
+					// //	$$client->send(json_encode(array("type"=>$type,"msg"=>$response_to,'id'=>$user_id)));
+
+					// }
 				}
 				break;
 		}

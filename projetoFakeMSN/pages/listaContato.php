@@ -19,11 +19,11 @@
             break;
         }
     }
-    //cria o novo NICKNAME se houver permissao
+     //cria o novo NICKNAME se houver permissao
     if($permissao == true)
     {
-        // $insereNick = "INSERT  INTO  usuarios  (nickname)  VALUES  ( '$nick');";
-        // $mysqli->query($insereNick) or die ($mysqli->error);
+        $insereNick = "INSERT  INTO  usuarios  (nickname)  VALUES  ( '$nick');";
+        $mysqli->query($insereNick) or die ($mysqli->error);
     }
     else
     {
@@ -38,20 +38,30 @@
 
         $queryConsulta  = 'SELECT id ,nickname FROM usuarios';
         $consulta = $mysqli->query($queryConsulta) or die ($mysqli->error);
+
+
+        foreach($consulta as $usr){
+            if($nick == $usr["nickname"]){
+                $myId = $usr["id"];
+                break;
+            }
+        }
+
         foreach($consulta as $usr)
         {
             //para não mostrar meu contato na minha propria lista de contatos
-            if($nick == $usr["nickname"]){
-                $myId = $usr["id"];
+ 
+            if($myId == $usr["id"]){
                 continue;
             }
+    
             echo "<li>
             <a href='telaChat.php?idUser=$usr[id]&myId=$myId' target='blank'><img src='../img/logoMSN.png' 
             width='20'/>
             <p>$usr[nickname]
                 <span>  - </span>
                 <span class='msgStatusContato'>
-                No dos outros é refresco</span>
+                $myId</span>
             </p>
             </li></a>";
         }
@@ -95,9 +105,9 @@
 
     <section id="corpo">
         <div id="containerCorpo">
-            <h5>Contatos<span>(<?php echo $quantContatos - 1 ?>)</span></h5>
+             <h5>Contatos<span>( <?php echo $quantContatos - 1 ?>)</span></h5>
             <ul>
-                <?php listaUsuarios() ?>
+                 <?php listaUsuarios() ?>
             </ul>
         </div>
     </section>
