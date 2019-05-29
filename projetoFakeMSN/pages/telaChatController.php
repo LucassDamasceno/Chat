@@ -3,6 +3,12 @@
     $idUser = $_GET['idUser'];
     $myId   = $_GET['myId'];
 
+
+    $queryConsulta  = 'SELECT id_remtente, id_destinat, msg FROM conversa';
+    $consulta = $mysqli->query($queryConsulta) or die ($mysqli->error);
+
+
+
     //echo "<script> alert($myId) </script>";
 ?>
 <script>
@@ -29,6 +35,7 @@
            
             switch(json.type) {
                 case 'chat':
+
                         if(json.id == <?php echo $idUser ?> && enter == true){
                             $('#chat_output').append("<p id='msgEu'>"+json.msg+"</p><br/>");
                         }else{
@@ -47,15 +54,18 @@
                 controleMsg = false
                 var chat_msg = $(this).val();
                 enter = true;
+
                 websocket_server.send(
                     JSON.stringify({
                         'type':'chat',
                         'user_id':idUser,
+                        'my_id':<?php echo $myId ?>,
                         'chat_msg':chat_msg
                     })
                 );
                 $(this).val('');
             }
          });
+
     })
 </script>

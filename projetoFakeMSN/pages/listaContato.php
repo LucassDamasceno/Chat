@@ -61,7 +61,7 @@
             <p>$usr[nickname]
                 <span>  - </span>
                 <span class='msgStatusContato'>
-                $myId</span>
+                mensagens</span>
             </p>
             </li></a>";
         }
@@ -77,6 +77,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="listaContato.css">
         <title>FakeWindows Live</title>
+
+
     </head>
     <body>
     <section id="top">
@@ -86,7 +88,8 @@
                 FakeWindows Live
             </div>
             <div id="logomarca">
-                <img src="../img/frameUserContatos.png"/>
+                <img src="../img/frameUserDois.png"/>
+                <span><?php echo $nick ?></span>
             </div>
             <div id="containerInfos">
                 <p class="infoHeader"><?php $nickname ?></p>

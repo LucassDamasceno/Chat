@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="img/logoMSN.png" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="main.css">
         <title>FakeWindows Live</title>
     </head>
@@ -39,7 +40,8 @@
     <!-- JavaScript do projeto -->
     <script src="main.js"></script>
     <!-- jQuery primeiro e Bootstrap JS -->
-    <script src="js/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <!-- <script src="js/jquery-3.4.0.min.js" type="text/javascript"></script> -->
+    <script src="js/jquery-3.4.1.min" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js" ></script>
 </body>
